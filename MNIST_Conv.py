@@ -37,7 +37,7 @@ x_test = x_test.reshape((-1,28,28,1)).astype("float32") / 255
 #y_train = keras.utils.to_categorical(y_train, num_classes= 10)
 #y_test = keras.utils.to_categorical(y_test, num_classes= 10)
 
-history = model.fit(x_train, y_train, batch_size= 32, epochs = 2, validation_split= 0.15, shuffle= True, verbose= 1)
+history = model.fit(x_train, y_train, batch_size= 32, epochs = 10, validation_split= 0.15, shuffle= True, verbose= 1)
 
 _ ,test_scores = model.evaluate(x_test, y_test, verbose = 2)
 
